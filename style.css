@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@200&family=Russo+One&family=Special+Elite&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+body{
+    animation: bgcolor infinite 15s;
+}
+
+.background{
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100vh;
+}
+
+@keyframes bgcolor{
+    0%{
+        background: #1e272e ;
+    }
+    20%{
+        background: #3d3d3d;
+    }
+    40%{
+        background: #4b4b4b;
+    }
+    60%{
+        background: #485460;
+    }
+    80%{
+        background: #596275;
+    }
+    100%{
+        background: #1e272e ;
+    }
+}
+
+.container-text{
+    margin: 0;
+    padding: 0;
+    color: #fff;
+    text-align: center; 
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+}
+
+h1{
+    border-right: 2px solid currentColor;
+    font-size: 40px;
+    font-weight: 500;
+    font-family: "Special Elite";
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.typing-animation{
+    animation: blinkCursor 500ms steps(25) infinite normal, typing 4s steps(25) 1s normal both;
+}
+
+@keyframes typing {
+    from{
+        width: 0;
+    }
+    to{
+        width: 8.5em;
+    }
+}
+
+@keyframes blinkCursor{
+    from{
+        border-right-color: currentColor ;
+    }
+    to{
+        border-right-color: transparent ;
+    }
+}
+
+h1 strong {
+    color: #b33939;
+    font-family: "Bebas Neue";
+}
+
+.text p{
+    font-size: 25px;
+    font-weight: 500;
+    margin-top: 10px;
+    font-family: "Bebas Neue";
+    opacity: 0;
+    animation: fadeInText 0s 1.1s both;
+}
+
+.text {
+    position: relative;
+    overflow: hidden;
+}
+
+.text::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #b33939;
+    transform: translateX(-100%);
+    animation: enLargeBlock 0.5s 0.6s both, revealBlock 0.5s 1.1s both;
+}
+
+
+@keyframes fadeInText{
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes enLargeBlock{
+    from{
+        width: 0;
+    }
+    to{
+        width: 100;
+    }
+}
+
+@keyframes revealBlock{
+    from{
+        transform: translateX(0);
+    }
+    to{
+        transform: translateX(100%);
+    }
+}
+
+
+.redes-sociais{
+    margin-top: 10px;
+}
+
+.redes-sociais a{
+    color: #fff;
+    padding: 10px;
+}
