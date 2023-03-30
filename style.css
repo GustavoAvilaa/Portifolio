@@ -141,12 +141,70 @@ h1 strong {
     }
 }
 
-
-.redes-sociais{
+/*--ICONES REDES SOCIAIS--*/
+.icons {
+	display: flex;
     margin-top: 10px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+	column-gap: 25px;
 }
-
-.redes-sociais a{
-    color: #fff;
-    padding: 10px;
+.icon {
+    display: inline-flex;
+	width: 40px;
+	height: 40px;
+	text-decoration: none;
+	font-size: 26px;
+	color: #fff;
+	border-radius: 50%;
+	outline: 2px solid #fff;
+	transition-property: outline-offset, outline-color, background-color;
+	transition-duration: 0.25s;
+}
+.icon:hover {
+	outline-offset: 4px;
+}
+.icon i {
+	margin: auto;
+}
+.icon:hover i {
+	animation: shake 0.25s;
+}
+.icon--linkedin:hover {
+	background-color: #1da1f2;
+	outline-color: #1da1f2;
+}
+.icon--instagram:hover {
+	background-image: radial-gradient(
+		circle at 30% 107%,
+		#fdf497 0%,
+		#fdf497 5%,
+		#fd5949 45%,
+		#d6249f 60%,
+		#285aeb 90%
+	);
+	outline-color: #a02d76;
+}
+.icon--github:hover {
+	background-color: #000000;
+	outline-color: #000000;
+}
+.icon--pdf:hover {
+	background-color: #0077b5;
+	outline-color: #0077b5;
+}
+@keyframes shake {
+	10% {
+		transform: rotate(15deg);
+	}
+	20% {
+		transform: rotate(-15deg);
+	}
+	30% {
+		transform: rotate(15deg);
+	}
+	40% {
+		transform: rotate(-15deg);
+	}
 }
