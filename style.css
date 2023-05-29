@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@200&family=Russo+One&family=Special+Elite&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Kanit:wght@500&display=swap");
 
 *{
     margin: 0;
@@ -8,36 +8,19 @@
     list-style: none;
 }
 
-body{
-    animation: bgcolor infinite 15s;
-}
+body {
+    height: 100vh;
+    background-color: #090909;
+    display: flex;
+    place-items: center;
+    font-family: "Kanit", sans-serif;
+  }
 
 .background{
     background-size: cover;
     background-position: center;
     width: 100%;
     height: 100vh;
-}
-
-@keyframes bgcolor{
-    0%{
-        background: #1e272e ;
-    }
-    20%{
-        background: #3d3d3d;
-    }
-    40%{
-        background: #4b4b4b;
-    }
-    60%{
-        background: #485460;
-    }
-    80%{
-        background: #596275;
-    }
-    100%{
-        background: #1e272e ;
-    }
 }
 
 .container-text{
@@ -52,94 +35,49 @@ body{
 }
 
 h1{
-    border-right: 2px solid currentColor;
     font-size: 40px;
     font-weight: 500;
-    font-family: "Special Elite";
+    font-family: "Kanit";
+    text-transform: uppercase;
     white-space: nowrap;
     overflow: hidden;
 }
 
-.typing-animation{
-    animation: blinkCursor 500ms steps(25) infinite normal, typing 4s steps(25) 1s normal both;
-}
-
-@keyframes typing {
-    from{
-        width: 0;
-    }
-    to{
-        width: 8.5em;
-    }
-}
-
-@keyframes blinkCursor{
-    from{
-        border-right-color: currentColor ;
-    }
-    to{
-        border-right-color: transparent ;
-    }
-}
-
 h1 strong {
-    color: #b33939;
-    font-family: "Bebas Neue";
+    color: #1af7ff;
+    font-family: "Kanit";
+    font-size: 50px;
 }
 
-.text p{
-    font-size: 25px;
-    font-weight: 500;
-    margin-top: 10px;
-    font-family: "Bebas Neue";
-    opacity: 0;
-    animation: fadeInText 0s 1.1s both;
-}
-
-.text {
+/*INICIO ANIMACAO - BACKEND*/
+.animation{
     position: relative;
-    overflow: hidden;
-}
+    font-size: 30px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    line-height: 50px;
+  }
 
-.text::after{
-    content: '';
+  .text {
+    color: transparent;
+    -webkit-text-stroke: 1px rgba(255, 255, 255, 0.6);
+  }
+  
+  .hover-text {
     position: absolute;
-    top: 0;
-    left: 0;
+    inset: 0;
+    width: 0%;
+    color: #1af7ff;
+    overflow: hidden;
+    transition: 0.5s ease-in-out;
+  }
+  
+  .animation:hover .hover-text {
     width: 100%;
-    height: 100%;
-    background: #b33939;
-    transform: translateX(-100%);
-    animation: enLargeBlock 0.5s 0.6s both, revealBlock 0.5s 1.1s both;
-}
+    filter: drop-shadow(0 0 40px #1af7ff);
+  }
 
-
-@keyframes fadeInText{
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
-
-@keyframes enLargeBlock{
-    from{
-        width: 0;
-    }
-    to{
-        width: 100;
-    }
-}
-
-@keyframes revealBlock{
-    from{
-        transform: translateX(0);
-    }
-    to{
-        transform: translateX(100%);
-    }
-}
+/*FIM ANIMACAO - WEBDEV*/
 
 /*--ICONES REDES SOCIAIS--*/
 .icons {
